@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+  <script>filename = '{{ code }}';</script>
+  <script src="{{ url_for('static', filename='js/jquery-1.12.4.min.js') }}" charset="utf-8"></script>
+  <script src="{{ url_for('static', filename='js/update-page.js') }}" charset="utf-8"></script>
+  <h1>Идёт процесс шакалирования...</h1>
+  <div id="image">
+    <img src="{{ url_for('static', filename='img/shakalazing.gif') }}">
+  </div>
+  <h2>Страница автоматически перезагрузится</h2>
+{% endblock %}

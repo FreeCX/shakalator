@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+  <script src="{{ url_for('static', filename='js/shakal-scale.js') }}" charset="utf-8"></script>
+  <h1>Шакализатор pdf</h1>
+  <div id="image">
+    <img src="{{ url_for('static', filename='img/jpeg-street.jpeg') }}">
+  </div>
+  <form action="/shakalazing" enctype="multipart/form-data" method="post">
+    <p>
+      <p id="scale_text">Шкала шакализации</p>
+      <p><input id="scale_value" name="dpi" type="range" min="0" max="200" value="0" step="10" 
+        oninput="format();" /></p>
+      <input type="file" name="file" accept="application/pdf">
+      <input type="submit" value="Сжимаем">
+    </p>
+  </form>
+  <script>format();</script>
+{% endblock %}
