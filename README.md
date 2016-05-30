@@ -17,3 +17,7 @@
 ### Источники
 * Шакал с жипег-стрит ([pikabu](http://pikabu.ru/)) [отредактированная версия]
 * Жилище шакалов ([joyreactor](http://joyreactor.cc/))
+
+
+### Лицензия
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png)](LICENCE)
