@@ -41,7 +41,8 @@ def process():
         filename = request.values.get('code')
         if filename:
             file_path = path.join(app.config['UPLOAD_FOLDER'], filename)
-            return send_file(file_path, mimetype='application/pdf')
+            return send_file(file_path, mimetype='application/pdf', 
+                as_attachment=True, attachment_filename=filename + '.pdf')
         else:
             return 404
 
